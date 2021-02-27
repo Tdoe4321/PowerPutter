@@ -39,11 +39,11 @@ void loop() {
   magnet_val = digitalRead(hall_pin);
 
   // See if the ball is in range
-  if (current_dist >= 4 && current_dist <= 9){
+  if (current_dist >= 4 && current_dist <= 6){
     sequential_count++;
     
     // If the ball has been in range for X sequential tics
-    if (sequential_count >= 50) {
+    if (sequential_count >= 500) {
       turning = true; 
     }
   }
